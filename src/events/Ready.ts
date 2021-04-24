@@ -3,7 +3,7 @@ import Bot from "../Bot";
 
 export function Ready(bot: Bot): void {
     setInterval(() => {
-        const actividades = [`${process.env.PREFIX}help`, `prefix: ${process.env.PREFIX}`];
+        const actividades = [`${process.env.PREFIX_BOT}help`, `prefix: ${process.env.PREFIX_BOT}`];
         bot.client.user!.setPresence({
             activity: {
                 name: actividades[Math.floor(Math.random() * actividades.length)],

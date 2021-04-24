@@ -1,7 +1,7 @@
 {
     "name": "megaelixir",
-    "version": "1.0.0",
-    "description": "Un simple bot para manejar los tíquets de usuarios.",
+    "version": "1.0.1",
+    "description": "Un simple bot para manejar los tickets de usuarios.",
     "main": "./dist/Main.js",
     "engines": {
         "node": "15.x"

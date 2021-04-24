@@ -42,9 +42,9 @@ npm install
 
 - \* **TOKEN_BOT**: Se obtiene desde el [Portal de Desarrolladores](https://discord.com/developers/applications/) de Discord.
 - \* **PREFIX_BOT**: El prefijo con el cual se ejecutarán los comandos.
-- **CHANNEL_ANNOUNCEMENT**: Canal donde se encuentra el mensaje con reacción del paquete: Anuncio.
-- **CHANNEL_SERVER**: Canal donde se encuentra el mensaje con reacción del paquete: Servidor
-- **CHANNEL_BOT**: Canal donde se encuentra el mensaje con reacción del paquete: Bot
+- **ROLES_ANNOUNCEMENT**: Rol que se le dará al cliente al solicitar el paquete: Anuncio.
+- **ROLES_SERVER**: Rol que se le dará al cliente al solicitar el paquete: Servidor
+- **ROLES_BOT**: Rol que se le dará al cliente al solicitar el paquete: Bot
 - **EMOJI_ANNOUNCEMENT**: Emoji que escuchará del mensaje del paquete: Anuncio.
 - **EMOJI_SERVER**: Emoji que escuchará del mensaje del paquete: Servidor
 - **EMOJI_BOT**: Emoji que escuchará del mensaje del paquete: Bot
