@@ -5,9 +5,9 @@ export class Ticket extends Command {
     readonly name = "ticket";
     readonly alias = [];
     readonly args = true;
-    readonly permission = "ADMINISTRATOR";
 
     async executed(message: Message, modo: string | undefined, userStr: string): Promise<any> {
+        if (!message.member?.roles.cache.has("701573439101730856")) return;
         if (!modo || !["add", "remove"].includes(modo.toLowerCase())) return message.channel.send("Necesitas especificar una opción entre `add` o `remove`.");
 
         const member = message.guild!.members.resolve(userStr) || message.mentions.members!.first();

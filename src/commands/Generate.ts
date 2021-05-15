@@ -6,9 +6,11 @@ export class Generate extends Command {
     readonly name = "generate";
     readonly alias = [];
     readonly args = true;
-    readonly permission = "ADMINISTRATOR";
 
     async executed(message: Message, emojiStr: string, canalStr: string, ...args: string[]): Promise<any> {
+        if (!message.member?.roles.cache.has("701573439101730856")) return;
+        if (!emojiStr || !canalStr || args.length == 0) return message.channel.send("Uso del comando `generate <emoji> [id-canal] <JsonEmbed>`");
+
         const emojiID = emojiRegExp.exec(emojiStr);
         let emoji: GuildEmoji | string | undefined = emojiStr ? message.guild?.emojis.cache.get(emojiID && emojiID[1] ? emojiID[1] : "") : undefined;
         if (message.deletable) message.delete();

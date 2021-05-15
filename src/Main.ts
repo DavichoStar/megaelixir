@@ -1,4 +1,5 @@
 if (process.env.NODE_ENV === "development") require("dotenv").config();
+import MongoDB from "./database/MongoDB";
 import MegaElixir from "./MegaElixir";
 import { Client } from "discord.js";
 
@@ -14,13 +15,14 @@ class Main {
 
         const bot = new MegaElixir(
             {
-                prefix: process.env.PREFIX_BOT!
+                prefix: process.env.NODE_ENV == "development" ? "!!" : (process.env.PREFIX_BOT as string)
             },
             client
         );
 
         bot.main(bot);
-        bot.start(process.env.TOKEN_BOT!);
+        bot.prestart = async () => await MongoDB();
+        bot.start(process.env.TOKEN_BOT as string);
     }
 }
 

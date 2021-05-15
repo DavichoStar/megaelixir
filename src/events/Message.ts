@@ -4,10 +4,10 @@ import Bot from "Bot";
 export async function Message(bot: Bot, msg: MessageDiscord): Promise<any> {
     if (msg.author.bot) return;
     if (msg.channel.type === "dm" || !msg.guild) return;
-    if (!msg.content.startsWith(process.env.PREFIX_BOT!)) return;
+    if (!msg.content.startsWith(bot.prefix)) return;
 
     const args = msg.content
-        .slice(process.env.PREFIX_BOT!.length) // se retira el prefijo del mensaje.
+        .slice(bot.prefix.length) // se retira el prefijo del mensaje.
         .trim() // se limpian los espacios al inicio y al final del string.
         .split(/ /g) // se separa los argumentos por cada espacio en el mensaje.
         .filter((e) => e); // se filtran los argumentos vacios.

@@ -4,7 +4,7 @@
     "description": "Un simple bot para manejar los tickets de usuarios.",
     "main": "./dist/Main.js",
     "engines": {
-        "node": "15.x"
+        "node": ">=15.x"
     },
     "scripts": {
         "dev": "cross-env NODE_ENV=development ts-node ./src/Main.ts",
@@ -28,6 +28,7 @@
         "discord.js": "^12.5.1",
         "express": "^4.17.1",
         "html-minifier": "^4.0.0",
+        "mongoose": "^5.12.9",
         "mustache": "^4.2.0"
     },
     "devDependencies": {
