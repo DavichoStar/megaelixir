@@ -28,7 +28,7 @@
         "discord.js": "^12.5.1",
         "express": "^4.17.1",
         "html-minifier": "^4.0.0",
-        "mongoose": "^5.12.9",
+        "mongoose": "^6.0.4",
         "mustache": "^4.2.0"
     },
     "devDependencies": {
